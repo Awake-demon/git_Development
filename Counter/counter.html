@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rolling Counter</title>
+    <link rel="stylesheet" href="counter.css">
+    <link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css'>
+</head>
+
+<body>
+    <div id="app">
+        <button @click="subtract" :disabled="isAnimating"><i class="fas fa-minus"></i></button>
+        <span :class="{before: isBefore, after: isAfter}" :data-before="countBefore" :data-after="countAfter">{{ count
+            }}</span>
+        <button @click="add" :disabled="isAnimating"><i class="fas fa-plus"></i></button>
+    </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js'></script>
+    <script src="conter.js"></script>
+</body>
+
+</html>
